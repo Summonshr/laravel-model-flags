@@ -29,7 +29,7 @@ Though there are other usages, the primary use case of this package is to easily
 
 User::notFlagged('wasSentPromotionMail')
     ->each(function(User $user) {
-        Mail::to($user->email)->send(new PromotionMail())
+        Mail::to($user->email)->send(new PromotionMail());
        
         $user->flag('wasSentPromotionMail');
     });
